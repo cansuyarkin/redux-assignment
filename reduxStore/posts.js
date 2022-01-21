@@ -87,13 +87,6 @@ const postsReducer = (posts = [], action) => {
                                 comment: action.payload.comment
                             }
                         ]
-                        // ...item, comments: item.comments.push(
-                        //     {
-                        //         commentId: action.payload.commentId,
-                        //          userId: action.payload.userId,
-                        //          comment: action.payload.comment
-                        //     }
-                        // )
                     };
                 }
                 return item;

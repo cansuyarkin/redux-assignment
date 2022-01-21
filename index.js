@@ -27,8 +27,8 @@ store.dispatch(addPost(2, "deneme2 post bilgisi"));
 //store.dispatch(updatePost(1, "deneme1 yeni"))
 
 // add comment
-store.dispatch(addComment(1, 1, 1, "blabla"));
-store.dispatch(addComment(1, 2, 2, "bla"));
+store.dispatch(addComment(1, 1, "blabla"));
+store.dispatch(addComment(1, 2, "bla"));
 
 // remove comment
 //store.dispatch(removeComment(1));

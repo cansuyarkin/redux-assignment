@@ -32,9 +32,9 @@ export const updatePost = (id, title) => ({
     payload: { id, title },
 });
 
-export const addComment = (id, commentId, userId, comment) => ({
+export const addComment = (id, userId, comment) => ({
     type: ADD_COMMENT,
-    payload: { id, commentId, userId, comment }
+    payload: { id, userId, comment }
 });
 
 export const removeComment = (id) => ({
@@ -82,7 +82,7 @@ const postsReducer = (posts = [], action) => {
                     return {
                         ...item, comments: [ 
                             {
-                                commentId: action.payload.commentId,
+                                commentId: item.comments.length + 1,
                                 userId: action.payload.userId,
                                 comment: action.payload.comment
                             } , ...item.comments

@@ -80,7 +80,7 @@ const postsReducer = (posts = [], action) => {
             return posts.map(item => {
                 if (item.id === action.payload.id) {
                     return {
-                        ...item, comments: [
+                        ...item, comments: [ ...item.comments, 
                             {
                                 commentId: action.payload.commentId,
                                 userId: action.payload.userId,
